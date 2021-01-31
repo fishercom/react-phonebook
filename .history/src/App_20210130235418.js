@@ -12,13 +12,10 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    const faker = require('faker');
-
     this.state = {
       contacts: [
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() }
+        { id: uuid(), firstName: 'George', lastName: 'Maclain', phoneNumber: '98898989' },
+        { id: uuid(), firstName: 'Ritha', lastName: 'Bertnard', phoneNumber: '94343532' }
       ],
       action: null,
       contact: null

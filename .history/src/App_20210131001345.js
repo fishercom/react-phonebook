@@ -16,9 +16,9 @@ class App extends React.Component {
 
     this.state = {
       contacts: [
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() }
+        { id: uuid(), firstName: faker.name.firstName, lastName: faker.name.lastName, phoneNumber: faker.name.phoneNumber },
+        { id: uuid(), firstName: faker.name.firstName, lastName: faker.name.lastName, phoneNumber: faker.name.phoneNumber },
+        { id: uuid(), firstName: faker.name.firstName, lastName: faker.name.lastName, phoneNumber: faker.name.phoneNumber }
       ],
       action: null,
       contact: null

@@ -5,31 +5,34 @@ import header from './assets/images/header.png';
 
 import List from './components/List';
 import Form from './components/Form';
-import uuid from 'react-uuid'
 
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    const faker = require('faker');
-
     this.state = {
       contacts: [
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() }
-      ],
-      action: null,
-      contact: null
+        { id: '1', firstName: 'George', lastName: 'Maclain', phoneNumber: '98898989' },
+        { id: '2', firstName: 'Ritha', lastName: 'Bertnard', phoneNumber: '94343532' }
+      ]
     };
   }
 
-  changeView = (action) => {
+  changeView = (action, changeParams = {}) => {
+    let contact = { personId: null, newPerson: null, updatedPerson: null, deleteId: null };
+    contact = { ...changeParams };
+    console.log(contact);
+
     let state = { ...this.state };
     state.action = action;
+    let tmp = [...this.state.contacts];
+    if (action === 'insert') {
+      tmp.push(contact);
+    }
+    state.contacts = tmp;
 
-    console.log(state.contacts);
+    console.log(state);
     super.setState(state);
   }
 

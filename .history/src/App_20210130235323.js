@@ -5,20 +5,16 @@ import header from './assets/images/header.png';
 
 import List from './components/List';
 import Form from './components/Form';
-import uuid from 'react-uuid'
 
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    const faker = require('faker');
-
     this.state = {
       contacts: [
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() },
-        { id: uuid(), firstName: faker.name.firstName(), lastName: faker.name.lastName(), phoneNumber: faker.phone.phoneNumber() }
+        { id: '6c07716-d803-cbea-ee83-00f8dfa5a45f', firstName: 'George', lastName: 'Maclain', phoneNumber: '98898989' },
+        { id: '2', firstName: 'Ritha', lastName: 'Bertnard', phoneNumber: '94343532' }
       ],
       action: null,
       contact: null
